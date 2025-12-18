@@ -1,0 +1,275 @@
+table FactInternetSales
+	lineageTag: 20c901d1-d9b9-4423-be00-c3b35aa8f36b
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 49f0aba4-61ad-44bd-bc7d-b6105cbbab6c
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e0814c9-9685-4aac-9f28-33990af7cb75
+		summarizeBy: count
+		sourceColumn: OrderDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 4620f272-084c-44be-9451-e47742592bc0
+		summarizeBy: count
+		sourceColumn: DueDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 21a64dc3-1854-41fb-8b4a-f3460cc78c7a
+		summarizeBy: count
+		sourceColumn: ShipDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e4a20b9f-ab28-4074-a574-6fd959dec5fe
+		summarizeBy: count
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e86c8c2a-d91e-4efe-9bca-3a56b5388f5f
+		summarizeBy: count
+		sourceColumn: PromotionKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 165e32a4-1a96-49d8-bcfd-735ea98bafad
+		summarizeBy: count
+		sourceColumn: CurrencyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1650282b-9514-4dd5-bf5f-80851aaba8a5
+		summarizeBy: count
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderNumber
+		dataType: string
+		lineageTag: 68718fed-e8bd-4fb5-8635-085be3fa33ff
+		summarizeBy: none
+		sourceColumn: SalesOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderLineNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b421d17-cfd3-4c6b-9260-f2d7acdfbba8
+		summarizeBy: sum
+		sourceColumn: SalesOrderLineNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisionNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: c8caa9f4-4e7f-4b88-8667-11d7fb9e3fa6
+		summarizeBy: sum
+		sourceColumn: RevisionNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 2611ee25-2f9e-41da-9427-4636cfcfe143
+		summarizeBy: sum
+		sourceColumn: OrderQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		lineageTag: 298ad62d-4511-4885-a101-4db07a98588a
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ExtendedAmount
+		dataType: double
+		lineageTag: ffacb40a-3888-454b-86fd-e932fc0e425b
+		summarizeBy: sum
+		sourceColumn: ExtendedAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitPriceDiscountPct
+		dataType: int64
+		formatString: 0
+		lineageTag: c1383767-7a03-4849-a715-3c41266099c4
+		summarizeBy: sum
+		sourceColumn: UnitPriceDiscountPct
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountAmount
+		dataType: int64
+		formatString: 0
+		lineageTag: 3dce6558-170c-46d1-9f47-6baa6641c6ab
+		summarizeBy: sum
+		sourceColumn: DiscountAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductStandardCost
+		dataType: double
+		lineageTag: ce3359be-9f1e-4c53-b2de-e143d235ee7d
+		summarizeBy: sum
+		sourceColumn: ProductStandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalProductCost
+		dataType: double
+		lineageTag: fed62322-44c4-4bba-beab-4a29f4742c98
+		summarizeBy: sum
+		sourceColumn: TotalProductCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SalesAmount
+		dataType: double
+		lineageTag: 5808f11e-d541-4687-91b6-07367a82398b
+		summarizeBy: sum
+		sourceColumn: SalesAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxAmt
+		dataType: double
+		lineageTag: ba8cc6cd-b4cf-41ae-a64d-2334e037eef7
+		summarizeBy: sum
+		sourceColumn: TaxAmt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Freight
+		dataType: double
+		lineageTag: 9015f5c0-c53e-4724-b1b9-94983720b8d8
+		summarizeBy: sum
+		sourceColumn: Freight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CarrierTrackingNumber
+		dataType: string
+		lineageTag: 46416064-515e-40b7-990f-31c29759cdf6
+		summarizeBy: none
+		sourceColumn: CarrierTrackingNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerPONumber
+		dataType: string
+		lineageTag: 92e984e6-9c4e-4973-8146-90d4f1accb4f
+		summarizeBy: none
+		sourceColumn: CustomerPONumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7005c23d-4dbb-4501-834d-c06a3ef0046a
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		variation Variation
+			isDefault
+			relationship: 19f7fa86-6cbd-42e5-987a-5df3c797d6b6
+			defaultHierarchy: LocalDateTable_760f0f8f-d75b-4315-b3ce-45b54e166a41.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f1179129-66db-4c20-8299-b86bb65d199d
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: 18734a93-7f56-451d-b348-062e67313c49
+			defaultHierarchy: LocalDateTable_bf5da505-36ac-4f26-bcaa-f7a98cda646c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ShipDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8f6248e8-a649-4254-923d-11f7f6ce1cc2
+		summarizeBy: none
+		sourceColumn: ShipDate
+
+		variation Variation
+			isDefault
+			relationship: 8bf31cd1-029c-4747-be62-367f8e382cf3
+			defaultHierarchy: LocalDateTable_0b1ec85b-28b0-4bff-9a5e-04a9ce01796c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition FactInternetSales = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("F:\POwer Bi Udemy 2025\Resource\PowerBIData.xlsx"), null, true),
+				    FactInternetSales_Sheet = Source{[Item="FactInternetSales",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(FactInternetSales_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProductKey", Int64.Type}, {"OrderDateKey", Int64.Type}, {"DueDateKey", Int64.Type}, {"ShipDateKey", Int64.Type}, {"CustomerKey", Int64.Type}, {"PromotionKey", Int64.Type}, {"CurrencyKey", Int64.Type}, {"SalesTerritoryKey", Int64.Type}, {"SalesOrderNumber", type text}, {"SalesOrderLineNumber", Int64.Type}, {"RevisionNumber", Int64.Type}, {"OrderQuantity", Int64.Type}, {"UnitPrice", type number}, {"ExtendedAmount", type number}, {"UnitPriceDiscountPct", Int64.Type}, {"DiscountAmount", Int64.Type}, {"ProductStandardCost", type number}, {"TotalProductCost", type number}, {"SalesAmount", type number}, {"TaxAmt", type number}, {"Freight", type number}, {"CarrierTrackingNumber", type text}, {"CustomerPONumber", type text}, {"OrderDate", type date}, {"DueDate", type date}, {"ShipDate", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

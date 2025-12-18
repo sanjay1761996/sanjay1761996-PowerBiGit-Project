@@ -1,0 +1,7 @@
+role Bikes
+	modelPermission: read
+
+	tablePermission DimProductCategory = [EnglishProductCategoryName] == "Bikes"
+
+	annotation PBI_Id = 089e103338e14ebfb84525b2f4f50297
+

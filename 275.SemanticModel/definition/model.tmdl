@@ -1,0 +1,29 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DimProduct","DimProductCategory","DimProductSubcategory","FactInternetSales"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimProduct
+ref table DateTableTemplate_83c186dd-298c-49c1-83ed-d5d23c1ab8a1
+ref table LocalDateTable_e42a6501-1d96-4b03-8931-cecba0437ca0
+ref table DimProductCategory
+ref table DimProductSubcategory
+ref table FactInternetSales
+ref table LocalDateTable_760f0f8f-d75b-4315-b3ce-45b54e166a41
+ref table LocalDateTable_bf5da505-36ac-4f26-bcaa-f7a98cda646c
+ref table LocalDateTable_0b1ec85b-28b0-4bff-9a5e-04a9ce01796c
+
+ref role Bikes
+ref role 'Not Bikes'
+
+ref cultureInfo en-US
+

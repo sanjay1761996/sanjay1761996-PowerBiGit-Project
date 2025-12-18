@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "6393724daf294a98264d",
+  "position": {
+    "x": 712.03915171288747,
+    "y": 64.730831973898859,
+    "z": 1000,
+    "height": 215.07340946166397,
+    "width": 486.52528548123985,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimProductSubcategory"
+                    }
+                  },
+                  "Property": "EnglishProductSubcategoryName"
+                }
+              },
+              "queryRef": "DimProductSubcategory.EnglishProductSubcategoryName",
+              "nativeQueryRef": "EnglishProductSubcategoryName"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactInternetSales"
+                        }
+                      },
+                      "Property": "SalesAmount"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FactInternetSales.SalesAmount)",
+              "nativeQueryRef": "Sum of SalesAmount"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DimProductSubcategory"
+                  }
+                },
+                "Property": "EnglishProductSubcategoryName"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

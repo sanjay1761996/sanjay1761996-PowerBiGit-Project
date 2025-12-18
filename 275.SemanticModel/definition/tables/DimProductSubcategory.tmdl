@@ -1,0 +1,67 @@
+table DimProductSubcategory
+	lineageTag: 323e4c3f-5038-4a59-a084-2ee4c14d83fc
+
+	column ProductSubcategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2792a736-a28d-4655-a834-261f1077aa38
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 66ecb535-91ad-47e7-ba40-11169cdd6ce3
+		summarizeBy: count
+		sourceColumn: ProductSubcategoryAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishProductSubcategoryName
+		dataType: string
+		lineageTag: 92bcae18-21bc-41e7-aa2d-5448a27585ff
+		summarizeBy: none
+		sourceColumn: EnglishProductSubcategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishProductSubcategoryName
+		dataType: string
+		lineageTag: 29494115-89d3-4618-8ff1-6eff48acf8e9
+		summarizeBy: none
+		sourceColumn: SpanishProductSubcategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchProductSubcategoryName
+		dataType: string
+		lineageTag: 55892ff8-b7d8-42c3-88d0-7fc7c5d00de3
+		summarizeBy: none
+		sourceColumn: FrenchProductSubcategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 02f7efe8-2ed2-450e-80eb-16cee5a8cd1b
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProductSubcategory = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("F:\POwer Bi Udemy 2025\Resource\PowerBIData.xlsx"), null, true),
+				    DimProductSubcategory_Sheet = Source{[Item="DimProductSubcategory",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(DimProductSubcategory_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProductSubcategoryKey", Int64.Type}, {"ProductSubcategoryAlternateKey", Int64.Type}, {"EnglishProductSubcategoryName", type text}, {"SpanishProductSubcategoryName", type text}, {"FrenchProductSubcategoryName", type text}, {"ProductCategoryKey", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
